@@ -1,8 +1,14 @@
-import HomeTemplate from "../templates/HomeTemplate"
-
-const Home = () => {
+const Home = ({title}) => {
   return (
-    <HomeTemplate title={"Movies App"}/>
+    <main>
+      <h1>{title}</h1>
+      <figure>
+      
+      </figure>
+      <a href="/movies">
+        Go to Dashboard
+      </a>
+    </main>
   )
 }
 

@@ -1,26 +1,26 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
-import API_KEY from "../../credentials/ApiMovies"
+import MoviesTemplate from "./MoviesTemplate"
+import Spinner from "../atoms/Spinner"
 
-const FEATURE = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&'
+const FEATURE = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key='
+const API_KEY = '0a35055f1bc3f2f0fff299fc83a00175'
 
 const Movies = () => {
-  //const [movies, setMovies] = useState()
+  const [movies, setMovies] = useState()
 
   useEffect(() => {
-    axios.get(FEATURE+API_KEY)
+    axios.get(FEATURE+API_KEY+'&page=1')
       .then((res) => {
-        console.log(res.data)
+        setMovies(res.data.results)
       })
       .catch((e) => {
         console.log(e)
       })
-  })
+  }, [])
 
   return (
-    <div>
-      Movies page
-    </div>
+    movies ? <MoviesTemplate films={movies} /> : <Spinner />
   )
 }
 
