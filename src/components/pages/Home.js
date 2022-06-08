@@ -1,10 +1,8 @@
-
+import HomeTemplate from "../templates/HomeTemplate"
 
 const Home = () => {
   return (
-    <div>
-      Hola mundo    
-    </div>
+    <HomeTemplate title={"Movies App"}/>
   )
 }
 
