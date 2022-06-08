@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "../components/pages/Home"
 import Movies from "../components/pages/Movies"
+import Series from "../components/pages/Series"
 
 const RouterComponent = () => {
   return (
@@ -14,7 +15,15 @@ const RouterComponent = () => {
           <Route 
             path="/movies"
             element = {
-              <Movies />}/>
+              <Movies />
+            }
+          />
+          <Route 
+            path="/tvseries"
+            element = {
+              <Series/>
+            }
+          />
       </Routes>
   )
 }
