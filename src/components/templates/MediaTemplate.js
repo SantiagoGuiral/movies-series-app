@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Movie from "../organisms/Movie"
+import Card from "../organisms/Card"
 import Header from "../organisms/Header"
 import Spinner from "../atoms/Spinner"
 import axios from "axios"
@@ -32,7 +32,7 @@ const MediaTemplate = ({ title }) => {
 			{
 				data ? (
 					data.map((media) => {
-						return (<Movie key={media.id} {...media} />)
+						return (<Card key={media.id} {...media} />)
 					})
 				) : <Spinner />
 			}
