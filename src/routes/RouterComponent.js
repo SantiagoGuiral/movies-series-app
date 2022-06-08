@@ -8,7 +8,7 @@ const RouterComponent = () => {
           <Route 
             path="/"
             element = {
-                <Home title={"Movies App"} />
+                <Home />
             }
           />
           <Route 
