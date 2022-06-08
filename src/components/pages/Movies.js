@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-import MoviesTemplate from "../templates/MoviesTemplate"
+import MediaTemplate from "../templates/MediaTemplate"
 import Spinner from "../atoms/Spinner"
 
 const FEATURE = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key='
@@ -20,7 +20,7 @@ const Movies = () => {
   }, [])
 
   return (
-    movies ? <MoviesTemplate films={movies} /> : <Spinner />
+    movies ? <MediaTemplate data={movies} /> : <Spinner />
   )
 }
 
