@@ -1,0 +1,41 @@
+@import "../../../styles/variables.scss";
+
+.info {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__img {
+        object-fit: cover;
+        height: 480px;
+        width: 100%;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+
+        &__vote {
+            font-weight: bold;
+            padding: 5px;
+            background-color: darken($color: $primary, $amount: 5%);
+            border-radius: 5px;
+        }
+
+        .green {
+            color: $green;
+        }
+
+        .orange {
+            color: $orange;
+        }
+
+        .red {
+            color: $red;
+        }
+    }
+}

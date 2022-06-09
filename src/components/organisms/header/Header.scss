@@ -1,7 +1,7 @@
 @import "../../../styles/variables.scss";
 
 .header {
-    background-color: darken($color: $primary, $amount: 20%);
+    background-color: darken($color: $primary, $amount: 10%);
     height: 100px;
     display: flex;
     flex-direction: row;

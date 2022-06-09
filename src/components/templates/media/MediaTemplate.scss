@@ -1,0 +1,8 @@
+@import "../../../styles/variables.scss";
+
+.media-container {
+    background-color: $primary;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}

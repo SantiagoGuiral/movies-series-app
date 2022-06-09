@@ -4,6 +4,7 @@ import Header from "../../organisms/header/Header"
 import Spinner from "../../atoms/Spinner"
 import API from "../../../constants/api-constants"
 import axios from "axios"
+import "./MediaTemplate.scss"
 
 
 const MediaTemplate = ({ title }) => {
@@ -27,13 +28,15 @@ const MediaTemplate = ({ title }) => {
 	return (
 		<>
 			<Header />
-			{
-				data ? (
-					data.map((media) => {
-						return (<Card key={media.id} {...media} />)
-					})
-				) : <Spinner />
-			}
+			<main className="media-container">
+				{
+					data ? (
+						data.map((media) => {
+							return (<Card key={media.id} {...media} />)
+						})
+					) : <Spinner />
+				}
+			</main>
 		</>
 	)
 }
