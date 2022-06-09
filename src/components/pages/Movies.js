@@ -1,4 +1,4 @@
-import MediaTemplate from "../templates/MediaTemplate"
+import MediaTemplate from "../templates/media/MediaTemplate"
 
 const Movies = () => {
   return (    
