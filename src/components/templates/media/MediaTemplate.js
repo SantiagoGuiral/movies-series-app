@@ -13,17 +13,17 @@ const MediaTemplate = ({ title }) => {
 
 	const fetchData = ((URL) => {
 		axios.get(URL)
-      .then((res) => {
-        setdata(res.data.results)
-      })
-      .catch((e) => {
-        console.log(e)
-      })
+			.then((res) => {
+				setdata(res.data.results)
+			})
+			.catch((e) => {
+				console.log(e)
+			})
 	})
 
-  useEffect(() => {
-    fetchData(API.FEATURE+title+API.SORT+API.API_KEY+API.PAGE)
-  }, [title])
+	useEffect(() => {
+		fetchData(API.FEATURE + title + API.SORT + API.API_KEY + API.PAGE)
+	}, [title])
 
 	return (
 		<>
