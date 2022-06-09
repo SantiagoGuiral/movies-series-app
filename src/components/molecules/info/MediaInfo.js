@@ -3,10 +3,10 @@ import "./MediaInfo.scss"
 
 const POSTER = "https://image.tmdb.org/t/p/w1280";
 
-const setVoteClass = vote =>{
-	if (vote>=8) {
+const setVoteClass = vote => {
+	if (vote >= 8) {
 		return "green"
-	} else if (vote>=6) {
+	} else if (vote >= 6) {
 		return "orange"
 	} else {
 		return "red"
@@ -14,9 +14,9 @@ const setVoteClass = vote =>{
 }
 
 
-const MediaInfo = ({ title, poster_path, vote_average }) => {
+const MediaInfo = ({ title, poster_path, vote_average, overview }) => {
 	return (
-		<main className="info">
+		<section className="info">
 			<img className="info__img" src={poster_path ? (POSTER + poster_path) : NOT_FOUND} alt={"media"} />
 			<div className="info__data">
 				<h4 className="info__data__title">{title}</h4>
@@ -24,7 +24,11 @@ const MediaInfo = ({ title, poster_path, vote_average }) => {
 					{vote_average}
 				</span>
 			</div>
-		</main>
+			<div className="overview">
+				<h3>Overview</h3>
+				<p>{overview}</p>
+			</div>
+		</section>
 	)
 }
 
