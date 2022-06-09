@@ -1,8 +1,6 @@
 const Spinner = () => {
   return (
-    <div>
-        spinner
-    </div>
+    <div></div>
   )
 }
 

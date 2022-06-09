@@ -2,11 +2,9 @@ import { useState, useEffect } from "react"
 import Card from "../organisms/Card"
 import Header from "../organisms/Header"
 import Spinner from "../atoms/Spinner"
+import API from "../../constants/api-constants"
 import axios from "axios"
 
-const FEATURE = 'https://api.themoviedb.org/3/discover/'
-const SORT = '?sort_by=popularity.desc&api_key='
-const API_KEY = '0a35055f1bc3f2f0fff299fc83a00175'
 
 const MediaTemplate = ({ title }) => {
 
@@ -23,7 +21,7 @@ const MediaTemplate = ({ title }) => {
 	})
 
   useEffect(() => {
-    fetchData(FEATURE+title+SORT+API_KEY+'&page=1')
+    fetchData(API.FEATURE+title+API.SORT+API.API_KEY+API.PAGE)
   }, [title])
 
 	return (
