@@ -1,5 +1,5 @@
-import MediaInfo from "../molecules/MediaInfo"
-import Overview from "../molecules/Overview"
+import MediaInfo from "../../molecules/info/MediaInfo"
+import Overview from "../../molecules/overview/Overview"
 
 const Card = ({ title, poster_path, vote_average, overview}) => {
   return (

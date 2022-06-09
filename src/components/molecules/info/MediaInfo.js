@@ -1,4 +1,4 @@
-import NOT_FOUND from "../../assets/images/not-found.png"
+import NOT_FOUND from "../../../assets/images/not-found.png"
 
 const POSTER = "https://image.tmdb.org/t/p/w1280";
 

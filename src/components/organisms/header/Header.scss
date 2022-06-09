@@ -1,0 +1,24 @@
+@import "../../../styles/variables.scss";
+
+.header {
+    background-color: darken($color: $primary, $amount: 20%);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 90px;
+        margin: 0px 40px;
+
+        &__icon {
+            height: 90%;
+            width: auto;
+        }
+    }
+}

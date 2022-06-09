@@ -1,14 +1,14 @@
-import STRINGS from "../../constants/string-constants"
+import STRINGS from "../../../constants/string-constants"
+import "./Navbar.scss"
 
 const Navbar = () => {
   return (
-    <div>
-      <ul>
+    <nav className="navbar">
+      <ul className="navbar__ul">
         <li><a href="/movies">{STRINGS.MOVIES}</a></li>
         <li><a href="/series">{STRINGS.SERIES}</a></li>
-      </ul>
-      
-    </div>
+      </ul>  
+    </nav>
   )
 }
 

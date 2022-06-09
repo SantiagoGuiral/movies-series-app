@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Card from "../../organisms/Card"
-import Header from "../../organisms/Header"
+import Card from "../../organisms/card/Card"
+import Header from "../../organisms/header/Header"
 import Spinner from "../../atoms/Spinner"
 import API from "../../../constants/api-constants"
 import axios from "axios"
