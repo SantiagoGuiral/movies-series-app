@@ -9,12 +9,13 @@ import "./MediaTemplate.scss"
 
 const MediaTemplate = ({ title }) => {
 
-	const [data, setdata] = useState()
+	const [data, setData] = useState()
+	const [search, setSearchTerm] = useState()
 
 	const fetchData = ((URL) => {
 		axios.get(URL)
 			.then((res) => {
-				setdata(res.data.results)
+				setData(res.data.results)
 			})
 			.catch((e) => {
 				console.log(e)
@@ -25,9 +26,31 @@ const MediaTemplate = ({ title }) => {
 		fetchData(API.FEATURE + title + API.SORT + API.API_KEY + API.PAGE)
 	}, [title])
 
+	const handleOnSubmit = (e) => {
+		e.preventDefault()
+		if (searchTerm) {
+			fetchData()
+			searchTerm('')
+		}
+	}
+
+	const handleOnChange = (e) => {
+		setSearchTerm(e.target.value)
+	}
+
 	return (
 		<>
 			<Header />
+			<header className="search-header">
+				<form onSubmit={handleOnSubmit}>
+					<input
+						className="search-input"
+						type="search"
+						value={searchTerm}
+						onChange={handleOnChange}
+						placeholder="search..."/>
+				</form>
+			</header>
 			<main className="media-container">
 				{
 					data ? (
