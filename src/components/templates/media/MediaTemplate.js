@@ -10,7 +10,7 @@ import "./MediaTemplate.scss"
 const MediaTemplate = ({ title }) => {
 
 	const [data, setData] = useState()
-	const [search, setSearchTerm] = useState()
+	const [searchTerm, setSearchTerm] = useState()
 
 	const fetchData = ((URL) => {
 		axios.get(URL)
@@ -29,7 +29,7 @@ const MediaTemplate = ({ title }) => {
 	const handleOnSubmit = (e) => {
 		e.preventDefault()
 		if (searchTerm) {
-			fetchData()
+			fetchData(API.SEARCH + title + "?" + API.API_KEY + API.QUERY + searchTerm)
 			searchTerm('')
 		}
 	}
