@@ -40,16 +40,18 @@ const MediaTemplate = ({ title }) => {
 
 	return (
 		<>
-			<Header />
-			<header className="search-header">
-				<form onSubmit={handleOnSubmit}>
-					<input
-						className="search-input"
-						type="search"
-						value={searchTerm}
-						onChange={handleOnChange}
-						placeholder="search..."/>
-				</form>
+			<header className="media-header">
+				<Header />
+				<div className="media-header__search">
+					<form onSubmit={handleOnSubmit}>
+						<input
+							className="media-header__input"
+							type="search"
+							value={searchTerm}
+							onChange={handleOnChange}
+							placeholder="search..."/>
+					</form>
+				</div>
 			</header>
 			<main className="media-container">
 				{

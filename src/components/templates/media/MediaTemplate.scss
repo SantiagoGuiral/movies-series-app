@@ -6,3 +6,32 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.media-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darken($color: $primary, $amount: 10%);
+
+
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.2rem;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: 45px;
+        padding: 0.5rem 1.5rem;
+        margin: 0px 15px;
+
+        &:active {
+            outline: 0;
+        }
+    }
+}
