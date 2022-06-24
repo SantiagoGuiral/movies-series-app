@@ -18,7 +18,7 @@ const MediaTemplate = ({ title }) => {
 				setData(res.data.results)
 			})
 			.catch((e) => {
-				console.log(e)
+				console.error(e)
 			})
 	})
 
